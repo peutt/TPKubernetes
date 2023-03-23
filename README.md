@@ -10,3 +10,12 @@ On peux vérifier que le pod Nginx est en cours d'exécution avec la commande su
 ![Screenshot](ScreenShots/q2b1.png)
 Ainsi, la page d'acceuil Nginx est accessible sur http://localhost:8080
 ![Screenshot](ScreenShots/q2b2.png)
+3. On crée les fichiers php-myadmin-mysql.yaml et my-sql-service.yaml et on execute les commande suivantes:
+`kind create cluster`
+`kubectl apply -f phpmyadmin-mysql.yaml`
+`kubectl apply -f mysql-service.yaml`
+`kubectl port-forward phpmyadmin-pod 8080:80`
+![Screenshot](ScreenShots/q3a1.png)
+![Screenshot](ScreenShots/q3a2.png)
+Ainsi, on peux se connecter à phpmyadmin avec les identifiants corespondant aux variables d'environements sur http://localhost:8080
+![Screenshot](ScreenShots/q3b.png)
